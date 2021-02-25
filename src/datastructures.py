@@ -43,10 +43,11 @@ class FamilyStructure:
     def delete_member(self, id):
         for member in self._members:
             if member["id"] ==id:
-                self._members.remove()
-        return self._members
+                self._members.remove(member)
+                return True
+        
         # fill this method and update the return
-        pass
+        
 
     def get_member(self, id):
         for member in self._members:
